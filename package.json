@@ -1,21 +1,32 @@
 {
   "name": "App",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple node react app to manage contacts",
   "main": "index.js",
   "scripts": {
     "start": "node App.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Node-React-Demo"
+  ],
+  "author": "karthikeyan",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.14.2",
     "handlebars": "^4.0.6",
     "mongodb": "^2.2.16",
-    "pug": "^2.0.0-beta6",
-    "webpack": "^1.14.0"
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-inject": "^4.2.0",
+    "gulp-nodemon": "^2.2.1",
+    "wiredep": "^4.0.0"
   }
 }
