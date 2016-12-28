@@ -5,6 +5,7 @@ const MongoClient = require('mongodb').MongoClient;
 var handlebars = require("express-handlebars");
 var bodyParser = require("body-parser");
 var cookieParser = require("cookie-parser");
+var passport =  require("passport");
 var session = require("express-session");
 
 var listContact = express.Router();
@@ -45,22 +46,35 @@ app.get("/",function(req,res){
     res.sendFile(__dirname+"/src/views/index.html")
 })
 
-app.post("/",(req,res)=>{
-           db.collection('contact').save(req.body,(err,result)=>{
-               if (err) return console.log(err)
-               console.log("Saved");
-               res.redirect("/");
-           });
+
+app.post("/signup",function(req,res){
+ 
+      MongoClient.connect("mongodb://karthik:password@ds145828.mlab.com:45828/inventory",function(err,database){
+        if (err) return console.log(err)
+        var collection = database.collection("users");
+        var user = {
+            username:req.body.username,
+            password:req.body.password
+        }
+        collection.insert(user,function(err,results){
+                console.log("Saved");
+                 req.login(results.ops[0],function(){
+                       res.redirect("/profile")
+                  });
+         });
+         });
+    
 });
 
-app.post("/auth",function(req,res){
-  req.login(req.body,function(){
-      res.redirect("/profile")
-  })
-});
+app.post("/signin",passport.authenticate("local",{
+    failureRedirect:"/",
+    successRedirect:"/profile"
+}))
+
 
 app.get("/profile",function(req,res){
   res.json(req.user);
 })
 
 
+ 

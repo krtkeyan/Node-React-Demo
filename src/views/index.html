@@ -42,7 +42,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand" href="#page-top">Demo</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -52,10 +52,10 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#auth">Login/SignUp</a>    
-                    </li> 
+                        <a href="#auth">Login</a>    
+                    </li>  
                     <li class="page-scroll">
-                        <a href="#contact">Contact</a>
+                        <a href="#contact">SignUp</a>
                     </li>
                 </ul>
             </div>
@@ -71,23 +71,24 @@
                 <div class="col-lg-12">
                     <img class="img-responsive" src="assets/img/profile.png" alt="">
                     <div class="intro-text">
-                        <span class="name">Contacts</span>
-                        <hr class="star-light"> 
+                        <span class="name">Signin</span>
+                        <hr class="star-light">
+                         <section id="auth">  
+                         <form class="form-inline" action="/signin" method="POST">
+                        <div class="form-group">
+                             <label for="username">Name</label>
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Jane Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                             <input type="password" class="form-control" name="password" id="password">
+                        </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                      </form>
+                     </section> 
                     </div>
                     
-             <section id="auth">       
-             <form class="form-inline" action="/auth" method="POST">
-                <div class="form-group">
-                         <label for="username">Name</label>
-                         <input type="text" class="form-control" name="username" id="username" placeholder="Jane Doe">
-                </div>
-                <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password">
-                </div>
-                <button type="submit" class="btn btn-primary">Login</button>
-             </form>
-             </section>
+    
                 </div>
             </div>
         </div>
@@ -99,7 +100,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Contact Me</h2>
+                    <h2>Sign Up</h2>
                     <hr class="star-primary">
                 </div>
             </div>
@@ -107,18 +108,18 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                     <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form  action="/" method="POST">
+                    <form  action="/signup" method="POST">
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Name" name="name" id="name" required data-validation-required-message="Please enter your name.">
+                                <input type="text" class="form-control" placeholder="username" name="username" id="username" required data-validation-required-message="Please enter your username.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control" placeholder="Email Address" name="email" id="email" required data-validation-required-message="Please enter your email address.">
+                                <label>Password</label>
+                                <input type="password" class="form-control" placeholder="password" name="password" id="password" required data-validation-required-message="Please enter your Password.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -127,7 +128,7 @@
                         <div id="success"></div>
                         <div class="row">
                             <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg">Send</button>
+                                <button type="submit" class="btn btn-success btn-lg">SignUp</button>
                             </div>
                         </div>
                     </form>
