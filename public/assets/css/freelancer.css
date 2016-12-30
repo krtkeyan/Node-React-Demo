@@ -73,7 +73,7 @@ header {
   color: white;
 }
 header .container {
-  padding-top: 100px;
+  padding-top: 10px;
   padding-bottom: 50px;
 }
 header img {
@@ -93,7 +93,7 @@ header .intro-text .skills {
 }
 @media (min-width: 768px) {
   header .container {
-    padding-top: 200px;
+    padding-top: 100px;
     padding-bottom: 100px;
   }
   header .intro-text .name {
@@ -371,7 +371,7 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-success {
   color: white;
-  background-color: #18BC9C;
+  background-color: #18BC9C !important;
   border-color: #18BC9C;
   font-weight: 700;
 }
@@ -380,8 +380,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-success:active,
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
-  color: white;
-  background-color: #128f76;
+  color:#18BC9C !important;
+  background-color:white !important;
   border-color: #11866f;
 }
 .btn-success:active,
