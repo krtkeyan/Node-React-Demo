@@ -9,16 +9,11 @@ module.exports = function(){
         usernameField:"email",
         passwordField:"password"
     },function(username,password,done){
-        redisClient.hget("user","email",(err,res)=>{
-            console.log(res);
-            if(res==username){
-                redisClient.hget("user","password",(err,pass)=>{
-                    if(bcrypt.compareSync(password,pass)){
-                        console.log("Redis Magic")
-                        done(null,username);
-                    }          
-                })
-            }else{
+        redisClient.hget(username,"password",(err,pass)=>{
+            if(bcrypt.compareSync(password,pass)){
+                done(null,username);
+            }          
+            else{
                 mongodb.connect("mongodb://karthik:password@ds145828.mlab.com:45828/inventory",function(err,db){
                 var collection = db.collection("users");
                 collection.findOne({_id:username},function(err,results){
@@ -33,7 +28,7 @@ module.exports = function(){
                     }
                 });
         })
-            }
+        }
         })
        
     }));
