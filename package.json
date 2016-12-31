@@ -13,6 +13,7 @@
   "author": "karthikeyan",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^1.0.1",
     "body-parser": "^1.15.2",
     "connect-redis": "^3.2.0",
     "cookie-parser": "^1.4.3",
@@ -21,6 +22,7 @@
     "express-session": "^1.14.2",
     "handlebars": "^4.0.6",
     "mongodb": "^2.2.16",
+    "mongoose": "^4.7.5",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0"
   },
