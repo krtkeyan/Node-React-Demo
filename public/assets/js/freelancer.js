@@ -18,9 +18,7 @@
         offset: 51
     });
     
-    if ($('#password')[0].value==$('#confirmPass')[0].value&&$('#confirmPass')[0]){
-        console.log("true")
-    }
+  
     // Closes the Responsive Menu on Menu Item Click
     $('.navbar-collapse ul li a').click(function(){ 
             $('.navbar-toggle:visible').click();

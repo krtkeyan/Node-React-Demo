@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Contact</title>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css" />
+    <!-- endbower -->
+
+    <!-- inject:css-->
+    <link rel="stylesheet" href="/assets/css/freelancer.css">
+    <link rel="stylesheet" href="/assets/css/freelancer.min.css">
+    <!-- endinject -->
+    
+
+    <!-- Custom Fonts -->
+  
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#login">Login</a>
+                    </li>
+                     <li class="page-scroll">
+                        <a href="#signup">SignUp</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    
+    <!-- Contact Section -->
+    <section id="signup">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Profile</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8" >
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                 <div class="form">
+                  <div class="container jumbotron center-div">
+                  <div id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="card">
+                      <div class="card-header" role="tab" id="headingOne">
+                        <h5 class="mb-0">
+                          <button class="btn btn-primary btn-block text-xs-left" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Change Username
+                          </button>
+                        </h5>
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="card-block">
+                         
+                             <div class="form-group">
+                                 <label for="name">Username</label>
+                                 <input type="text" class="form-control" id="name" name="name" >
+                               </div>
+                             <button type="submit" name="username" class="btn btn-success btn-lg" onclick="update()">Submit</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" role="tab" id="headingTwo">
+                        <h5 class="mb-0">
+                          <button class="btn btn-primary btn-block collapsed text-xs-left" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Change Primary Email
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="card-block">
+                            
+                             <div class="form-group">
+                                 <label for="email">Email</label>
+                                 <input type="text" class="form-control" id="email" name="email" placeholder="example@example.com">
+                               </div>
+                             <button type="submit" name="_id" class="btn btn-success btn-lg" onclick="update()">Submit</button>
+ 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" role="tab" id="headingThree">
+                        <h5 class="mb-0">
+                          <button class="btn btn-primary btn-block collapsed text-xs-left" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Change Password
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="card-block">
+                            
+                             <div class="form-group">
+                                 <label for="Password">Password</label>
+                                 <input type="password" class="form-control" id="password" name="password" >
+                               </div>
+                             <button type="submit" name="password" class="btn btn-success btn-lg" onclick="update()">Submit</button>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" role="tab" id="headingFour">
+                        <h5 class="mb-0">
+                          <button class="btn btn-primary btn-block collapsed text-xs-left" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+                            Cancel Account
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+                        <div class="card-block">
+                         <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                          Delete
+                        </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                          <h4 class="modal-title" id="myModalLabel">Are you Sure?</h4>
+                        </div>
+                        <div class="modal-body">
+                            This changes cannot be unchanged. This will remove user data from our database.
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-secondary" onclick="deleteProfile()">Ok</button>
+                      </div>
+                    </div>
+                  </div>
+                        
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  </div>
+                  
+                  </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+ 
+   
+     <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  
+    <!-- bower:js -->
+    <script src="/vendor/jquery/dist/jquery.js"></script>
+    <script src="/vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbower -->
+
+    <!-- inject:js -->
+    <script src="/assets/js/freelancer.js"></script>
+    <script src="/assets/js/freelancer.min.js"></script>
+    <script src="/assets/js/jqBootstrapValidation.js"></script>
+    <!-- endinject -->
+
+    <script>
+        function update() {
+            var val = $("#name")[0].value||$("#email")[0].value||$("#password")[0].value;
+            fetch("update",{
+                method:"put",
+                headers:{"Content-Type":"application/json"},
+                body: JSON.stringify({
+                    update:[event.srcElement.name,val]
+                })
+            });
+             $("#name")[0].value="",$("#email")[0].value="",$("#password")[0].value="";
+             console.log(event.srcElement.name)
+        }
+   </script>
+
+</body>
+
+</html>

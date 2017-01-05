@@ -4,8 +4,9 @@
   "description": "Simple node react app to manage contacts",
   "main": "index.js",
   "scripts": {
-    "start": "node App.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start-dev": "webpack-dev-server --inline --content-base public --history-api-fallback",
+    "start:prod": "webpack && node App.js"
   },
   "keywords": [
     "Node-React-Demo"
@@ -21,6 +22,7 @@
     "express-handlebars": "^3.0.0",
     "express-session": "^1.14.2",
     "handlebars": "^4.0.6",
+    "if-env": "^1.0.0",
     "mongodb": "^2.2.16",
     "mongoose": "^4.7.5",
     "passport": "^0.3.2",

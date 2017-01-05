@@ -7,7 +7,7 @@ var mongoose = require("mongoose");
 var bcrypt =  require("bcrypt");
 var redis = require("redis");
 var redisClient = redis.createClient();
-/**mongooese schema */
+/**mongooese schema */ 
 var User = require("../models/mongoose.schema");
 
 authRoutes.route("/signup").post(function(req,res){
@@ -23,6 +23,7 @@ authRoutes.route("/signup").post(function(req,res){
         var user = new User(userRecord);
 
         user.save(function(err){
+           
             if(err){ 
                 res.json({error:"record exists"});
             }
